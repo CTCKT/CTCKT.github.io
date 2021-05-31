@@ -1,10 +1,10 @@
 {
     "particles": {
       "number": {
-        "value": 10,
+        "value": 15,
         "density": {
           "enable": true,
-          "value_area": 300
+          "value_area": 200
         }
       },
       "color": {
@@ -95,8 +95,8 @@
           "speed": 3
         },
         "repulse": {
-          "distance": 500,
-          "duration": 1.0
+          "distance": 140,
+          "duration": 0.6
         },
         "push": {
           "particles_nb": 4
