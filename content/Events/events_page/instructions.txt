@@ -1,0 +1,1 @@
+all event webpages are added. Also add a event image and title.

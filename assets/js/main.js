@@ -27,7 +27,7 @@ function showMembers(data)
     cell.classList.add("w3-col","l3","m6","w3-margin-bottom","w3-padding");
     
        var imgchild = document.createElement('img');
-       imgchild.src = "content/Members/" + data.members[i].regno + ".png";
+       imgchild.src = "content/Members/profile_img/" + data.members[i].regno + ".png";
        imgchild.onerror = function(){this.src = "assets/images/default.png";}
        imgchild.alt = data.members[i].name;
        imgchild.classList.add("w3-image");
