@@ -44,6 +44,25 @@ function showMembers(data)
        var description = document.createElement('p');
        description.innerText = data.members[i].desc;
 
+       var links = document.createElement('div');
+       links.classList.add("w3-center");
+       
+       urls = ["github","linkedin","hackerrank","mail","web"];
+       urlsclass = ["fa-github","fa-linkedin","","",""];
+
+          for(j=0;j<urls.length;j++)
+          {
+            var anchor = document.createElement('a');
+            anchor.href = data.members.url[urls[j]];
+              var icon = document.createElement('i');
+              icon.classList.add("fa",urlsclass[j]);
+            anchor.appendChild(icon);
+            links.appendChild(anchor);
+            anchor = null;
+            icon = null;
+          }
+      
+
     cell.appendChild(imgchild);
     cell.appendChild(name);
     cell.appendChild(caption);
