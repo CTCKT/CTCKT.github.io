@@ -4,6 +4,25 @@
     z-index: 0;
 }
 
+.flickity-prev-next-button.previous 
+{
+    left: -10px;
+    padding-left: 5px;
+}
+
+.flickity-prev-next-button.next 
+{
+    right: -10px;
+    padding-right: 5px;
+}
+
+.carousel
+{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 a{
     text-decoration: none;
 }
