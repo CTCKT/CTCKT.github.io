@@ -44,7 +44,7 @@ function showMembers(data)
        var description = document.createElement('p');
        description.innerText = data.members[i].desc;
 
-       var links = document.createElement('div');
+       /*var links = document.createElement('div');
        links.classList.add("w3-center");
        
        urls = ["github","linkedin","hackerrank","mail","web"];
@@ -61,7 +61,7 @@ function showMembers(data)
             anchor = null;
             icon = null;
           }
-      
+      */
 
     cell.appendChild(imgchild);
     cell.appendChild(name);
