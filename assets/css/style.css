@@ -23,9 +23,36 @@
     padding-right: 20px;
 }
 
-a{
+.members-desc
+{
+    height: 112px;
+    overflow-y: auto;
+}
+.members-desc::-webkit-scrollbar
+{
+    width: 5px;
+}
+.members-desc::-webkit-scrollbar-track 
+{
+    background: #f1f1f1; 
+ }
+.members-desc::-webkit-scrollbar-thumb
+{
+    background:#888;
+}
+.members-desc::-webkit-scrollbar-thumb:hover 
+{
+    background: #555; 
+}
+
+a
+{
     text-decoration: none;
 }
+
+
+
+/*
 @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
 *{
     margin: 0;
@@ -116,3 +143,4 @@ footer .end{
 }
 
 }
+*/
