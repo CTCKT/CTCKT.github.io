@@ -41,6 +41,8 @@ function showMembers(data)
        caption.innerText = data.members[i].caption;
 
        var description = document.createElement('p');
+       description.style.textAlign = "justify";
+       description.style.padding = "4px"
        description.innerText = data.members[i].desc;
        description.classList.add("members-desc");
 
