@@ -15,9 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/js/flickity.pkgd.min.js"></script>
   <script src="assets/js/particles.js"></script>
-
-  <link rel="stylesheet" href="assets/css/forgraph.css">
-  <link rel="stylesheet" href="assets/css/fortimeline.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
 </head>
 
 <body style="height: 100%;background-color: white;">
@@ -71,44 +70,82 @@
       <div class="w3-row-padding w3-margin-top" id="project-list"></div>
     </div>
 
+    <!--Timeline-->
+    <div class="w3-container w3-padding " id="timeline">
+      <div class="w3-center"><h2 id="timeline-heading">We are 20 members strong...</h2></div>
+      <div class="w3-row w3-padding-16">
+        <div class="w3-round w3-quarter" style="text-align:right;padding-right:15px;">
+          Year
+        </div>
+        <div class="w3-rest">
+          Members
+        </div>
+      </div>
+      
+    </div>
 
-    <!-- Graph -->
-    <!--
-    <div class="bgraph">
-      <ul class="bar-graph">
-        <li class="bar-graph-axis">
-          <div class="bar-graph-label">100</div>
-          <div class="bar-graph-label">80</div>
-          <div class="bar-graph-label">60</div>
-          <div class="bar-graph-label">40</div>
-          <div class="bar-graph-label">20</div>
-          <div class="bar-graph-label">0</div>
-        </li>
-        <li class="bar primary" style="height: 22%;">
-          <div class="percent" style="font-size: 20px">22</div>
-          <div class="description">2021</div>
-        </li>
-        <li class="bar secondary" style="height: 40%;" title="90">
-          <div class="percent">40</div>
-          <div class="description">2022</div>
-        </li>
-        <li class="bar success" style="height: 50%;" title="80">
-          <div class="percent">50</div>
-          <div class="description">2023</div>
-        </li>
-        <li class="bar warning" style="height: 75%;" title="75">
-          <div class="percent">75</div>
-          <div class="description">2024</div>
-        </li>
-        <li class="bar alert" style="height: 76%;" title="40">
-          <div class="percent">76</div>
-          <div class="description">2025</div>
-        </li>
-      </ul>
-
-    </div> -->
     <!-- Time line -->
     <!--
+      <canvas id="myChart" style="width: 100%;height:450px"></canvas>
+        <script>
+          var ctx = document.getElementById('myChart');
+            const labels = ["2021","2020"];
+            const data = {
+              datasets: [
+                {
+                  data: {1:"2020",2:"2021"},
+                }
+              ]
+            };
+
+            var currIndex = 1;
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                  indexAxis: 'y',
+                  scales:{
+                    x:{
+                      grid:{
+                        display:false
+                      },
+                      ticks:{
+                        callback: function(val, index){
+                          if(currIndex != index)
+                          {
+                            currIndex = index;
+                            return Math.round(val);
+                          }
+                        }
+                      },
+                    },
+                    y:{
+                      grid:{
+                        display:false
+                      }
+                    }
+                  },
+                  elements: {
+                    bar: {
+                      borderWidth: 1,
+                    }
+                  },
+                  responsive: false,
+                  plugins: {
+                    legend: {
+                      position: '',
+                    },
+                    title: {
+                      display: true,
+                      text: 'Chart.js Horizontal Bar Chart'
+                    }
+                  }
+                },
+              };
+
+              var myChart = new Chart(ctx,config);
+
+          </script>
     <div class="row">
       <div class="column">
         <div class="content">

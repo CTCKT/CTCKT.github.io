@@ -142,3 +142,49 @@ function showProjects(data)
     cell = "";
   }
 }
+
+
+const xmlhttp3 = new XMLHttpRequest();
+xmlhttp3.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200)
+{
+    const obj = JSON.parse(this.responseText);      
+    updateTimeline(obj);
+}}
+
+xmlhttp3.open("GET","content//student_count.json");
+xmlhttp3.send();
+
+function updateTimeline(data)
+{
+  const len = data.count.length;
+  var element = document.getElementById("timeline");
+  var max = data.count[len-1].count;
+  document.getElementById("timeline-heading").innerText = "We are " + String(max) + " members strong . . .";
+  for(var i=0;i<3 && i<len;i++)
+  {
+    var cell = document.createElement('div');
+    cell.classList.add("w3-row");
+    cell.style.paddingTop = "3px";
+      var year = document.createElement('div');
+      year.classList.add("w3-quarter");
+      year.style.textAlign = "right";
+      year.style.paddingRight = "15px";
+      year.innerText = data.count[len-1-i].year;
+      
+      var bardiv = document.createElement('div');
+      bardiv.classList.add("w3-round-xlarge","w3-rest");
+         var bar = document.createElement('div');
+         bar.classList.add("w3-container","w3-blue","w3-round");
+         bar.style.display = "inline-block";
+         bar.style.width = String((data.count[len-1-i].count/max)*100)+"%";
+         bar.innerText = data.count[len-1-i].count;
+      bardiv.appendChild(bar);
+    cell.appendChild(year);
+    cell.appendChild(bardiv);
+    element.appendChild(cell);
+    cell=null;
+  }
+}
+
+
