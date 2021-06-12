@@ -11,10 +11,13 @@
   <link rel="stylesheet" href="assets/css/w3.css">
   <link rel="stylesheet" href="assets/css/flickity.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/images/favicon.png" sizes="32x32"/>
-  
+  <link rel="icon" href="assets/images/favicon.png" sizes="32x32" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+  <link rel="stylesheet" href="assets/css/forgraph.css">
+  <link rel="stylesheet" href="assets/css/fortimeline.css">
   <script src="assets/js/flickity.pkgd.min.js"></script>
   <script src="assets/js/particles.js"></script>
+  <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 </head>
 
 <body style="height: 100%;">
@@ -29,11 +32,15 @@
     </div>
   </div>
 
-  <div class="w3-display-container" style="background-color: black;display: block; min-height: 100%;min-width: 100%;" id="home">
+  <div class="w3-display-container" style="background-color: black;display: block; min-height: 100%;min-width: 100%;"
+    id="home">
     <div class="w3-display-middle">
-      <h1 class="w3-hide-medium w3-hide-small w3-text-white w3-center w3-jumbo"><span class="w3-padding w3-black w3-opacity-min"><b>CTC-KT</b></span></h1>
-      <h1 class="w3-hide-large w3-hide-small w3-text-white w3-center w3-xxlarge"><span class="w3-padding w3-black w3-opacity-min"><b>CTC-KT</b></span></h1>
-      <h1 class="w3-hide-large w3-hide-medium w3-text-white w3-center "><span class="w3-padding w3-black w3-opacity-min w3-xxlarge"><b>CTC-KT</b></span></h1>
+      <h1 class="w3-hide-medium w3-hide-small w3-text-white w3-center w3-jumbo"><span
+          class="w3-padding w3-black w3-opacity-min"><b>CTC-KT</b></span></h1>
+      <h1 class="w3-hide-large w3-hide-small w3-text-white w3-center w3-xxlarge"><span
+          class="w3-padding w3-black w3-opacity-min"><b>CTC-KT</b></span></h1>
+      <h1 class="w3-hide-large w3-hide-medium w3-text-white w3-center "><span
+          class="w3-padding w3-black w3-opacity-min w3-xxlarge"><b>CTC-KT</b></span></h1>
       <h4 class="w3-hide-small w3-text-light-grey w3-center">Karunya Student's Community</h4>
       <h6 class="w3-hide-large w3-hide-medium w3-text-light-grey w3-center">Karunya Student's Community</h6>
     </div>
@@ -46,8 +53,8 @@
     <div class="w3-container w3-padding" id="about">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
       <p>A Community group of karunya university students interested in developer technologies.
-      Students grow their knowledge in a peer-to-peer learning environment 
-      and build solutions for social problems surrounding us.
+        Students grow their knowledge in a peer-to-peer learning environment
+        and build solutions for social problems surrounding us.
       </p>
     </div>
 
@@ -62,7 +69,7 @@
     <div class="w3-container w3-padding-32" id="projects">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
     </div>
-  
+
     <div class="w3-row-padding">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
@@ -89,7 +96,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="w3-row-padding">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-display-container">
@@ -116,7 +123,7 @@
         </div>
       </div>
     </div>
-  
+
     <!--
     <div class="w3-row-padding w3-grayscale">
       <div class="w3-col l3 m6 w3-margin-bottom">
@@ -164,57 +171,125 @@
       </form>
     </div>
 -->
-   
-  <!-- Image of location/map -->
-  <div class="w3-container">
-    <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image" style="width:100%">
-  </div>
-  
-  <!-- End page content -->
-  </div>
 
+    <!-- Graph -->
+    <div class="bgraph">
+      <ul class="bar-graph">
+        <li class="bar-graph-axis">
+          <div class="bar-graph-label">100</div>
+          <div class="bar-graph-label">80</div>
+          <div class="bar-graph-label">60</div>
+          <div class="bar-graph-label">40</div>
+          <div class="bar-graph-label">20</div>
+          <div class="bar-graph-label">0</div>
+        </li>
+        <li class="bar primary" style="height: 22%;">
+          <!--height must change dynamically-->
+          <div class="percent" style="font-size: 20px">22</div>
+          <div class="description">2021</div>
+        </li>
+        <li class="bar secondary" style="height: 40%;" title="90">
+          <div class="percent">40</div>
+          <div class="description">2022</div>
+        </li>
+        <li class="bar success" style="height: 50%;" title="80">
+          <div class="percent">50</div>
+          <div class="description">2023</div>
+        </li>
+        <li class="bar warning" style="height: 75%;" title="75">
+          <div class="percent">75</div>
+          <div class="description">2024</div>
+        </li>
+        <li class="bar alert" style="height: 76%;" title="40">
+          <div class="percent">76</div>
+          <div class="description">2025</div>
+        </li>
+      </ul>
 
-<!-- Footer -->
-
-
-<footer>
-  <div class="container">
-      <div class="footer-content">
-          <div class="items">
-              <a href="#" class="logo">CTC-KT</a>  
-              <p>Artificial Intelligence and Robotics <br>Karunya Institute of Technology and Sciences, Karunya Nagar, Coimbatore, Tamil Nadu 641114 </p>
-          </div>
-          
-
-         
-          
-              
-              <ul>
-                <div class="social">
-                  <a href="https://www.facebook.com/karunyauniversity/" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a href="https://twitter.com/karunyauniv" target="_blank"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/karunyauniv/" target="_blank"><i class="fa fa-instagram"></i></a>
-                  <a href="https://github.com/CTCKT/CTCKT.github.io" target="_blank"><i class="fa fa-github"></i></a>
-              </div>
-          
-              </ul>
-          
-              <div class="items">
-                <h3>Legal</h3>
-            <ul>
-                <li><a href="#home">Terms</a></li>
-                <li><a href="#home">Privacy Policy</a></li>
-                
-                
-            </ul>
-            </div>
+    </div>
+    <!-- Time line -->
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="https://source.unsplash.com/1600x900/?mountains" alt="Mountains" style="width:100%">
+          <h3>Event 1</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, earum.</p>
+        </div>
       </div>
-      <hr>
-      <p class="end">Copyright © 2021 by CTC-KT. All rights reserved.</p>
-  </div>
-</footer>
+      <div class="column">
+        <div class="content">
+          <img src="https://source.unsplash.com/1600x900/?lights" alt="Lights" style="width:100%">
+          <h3>Event 2</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, odit?</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="https://source.unsplash.com/1600x900/?nature" alt="Nature" style="width:100%">
+          <h3>Event 3</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, in?</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="https://source.unsplash.com/1600x900/?water" alt="Mountains" style="width:100%">
+          <h3>Event 4</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, itaque.</p>
+        </div>
+      <div class="column">
+          <div class="content">
+            <img src="https://source.unsplash.com/1600x900/?water" alt="Mountains" style="width:100%">
+            <h3>Event 4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, itaque.</p>
+          </div>
+      </div>
+      </div>
+    </div>
 
-<script src="assets/js/main.js"></script>
+
+
+    <!-- Footer -->
+
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="items">
+            <a href="#" class="logo">CTC-KT</a>
+            <p>Artificial Intelligence and Robotics <br>Karunya Institute of Technology and Sciences, Karunya Nagar,
+              Coimbatore, Tamil Nadu 641114 </p>
+          </div>
+
+
+
+
+
+          <ul>
+            <div class="social">
+              <a href="https://www.facebook.com/karunyauniversity/" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/karunyauniv" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/karunyauniv/" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://github.com/CTCKT/CTCKT.github.io" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+
+          </ul>
+
+          <div class="items">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#home">Terms</a></li>
+              <li><a href="#home">Privacy Policy</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <p class="end">Copyright © 2021 by CTC-KT. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
