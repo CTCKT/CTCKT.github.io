@@ -45,6 +45,28 @@
     background: #555; 
 }
 
+.proj-desc
+{
+    height: 45px;
+    overflow-y: auto;
+}
+.proj-desc::-webkit-scrollbar
+{
+    width: 5px;
+}
+.proj-desc::-webkit-scrollbar-track 
+{
+    background: #f1f1f1; 
+ }
+.proj-desc::-webkit-scrollbar-thumb
+{
+    background:#888;
+}
+.proj-desc::-webkit-scrollbar-thumb:hover 
+{
+    background: #555; 
+}
+
 a
 {
     text-decoration: none;
