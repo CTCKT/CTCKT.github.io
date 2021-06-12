@@ -78,3 +78,67 @@ function showMembers(data)
   flkty.reloadCells()
   
 }
+
+const xmlhttp2 = new XMLHttpRequest();
+xmlhttp2.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200)
+{
+    const obj = JSON.parse(this.responseText);      
+    showProjects(obj);
+}}
+
+xmlhttp2.open("GET","content/Projects/config.json");
+xmlhttp2.send();
+
+function showProjects(data)
+{
+  const len = data.projects.length;
+  element = document.getElementById("project-list");
+  for(var i =0;i<len;i++)
+  {
+    var cell = document.createElement('div');
+    cell.classList.add("w3-third","w3-section");
+      var card = document.createElement('div');
+      card.classList.add("w3-card");
+          var row = document.createElement('div');
+          row.classList.add("w3-row");
+             var half1 = document.createElement('div');
+             half1.classList.add("w3-half");
+                 var img = document.createElement('img');
+                 img.src = data.projects[i].imgurl;
+                 img.style.width = "100%";
+                 img.style.height = "150px";
+             half1.appendChild(img);
+             var half2 = document.createElement('div');
+             half2.classList.add("w3-half");
+             half2.style.height = "150px";
+             half2.style.padding = "5px";
+                 var title = document.createElement('div');
+                 title.classList.add("w3-large");
+                 title.innerText = data.projects[i].name;
+                 var credit = document.createElement('div');
+                 credit.classList.add("w3-small");
+                 credit.innerText = "By " + data.projects[i].by;
+                 var desc = document.createElement('p');
+                 desc.classList.add("proj-desc");
+                 desc.innerText =  data.projects[i].desc;
+                 var link = document.createElement('a');
+                 link.href = data.projects[i].url;
+                     var span = document.createElement('span');
+                     span.innerText = "Know More ";
+                         var icon = document.createElement('i');
+                         icon.classList.add("fa","fa-plus");
+                     span.appendChild(icon);
+                 link.appendChild(span);
+             half2.appendChild(title);
+             half2.appendChild(credit);
+             half2.appendChild(desc);
+             half2.appendChild(link);
+          row.appendChild(half1);
+          row.appendChild(half2);
+      card.appendChild(row);
+    cell.appendChild(card);             
+    element.appendChild(cell);
+    cell = "";
+  }
+}
