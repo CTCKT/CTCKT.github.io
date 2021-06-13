@@ -1,6 +1,7 @@
 
 particlesJS.load('home', 'assets/js/particles.json', function() {});
 var flkty = new Flickity('.carousel');
+var eventFlkty = new Flickity('.events-carousel');
 
 
 const xmlhttp = new XMLHttpRequest();
@@ -152,7 +153,7 @@ if(this.readyState == 4 && this.status == 200)
     updateTimeline(obj);
 }}
 
-xmlhttp3.open("GET","content//student_count.json");
+xmlhttp3.open("GET","content/student_count.json");
 xmlhttp3.send();
 
 function updateTimeline(data)
@@ -187,4 +188,60 @@ function updateTimeline(data)
   }
 }
 
+const xmlhttp4 = new XMLHttpRequest();
+xmlhttp4.onreadystatechange = function(){
+if(this.readyState == 4 && this.status == 200)
+{
+    const obj = JSON.parse(this.responseText);      
+    showEvents(obj);
+}}
 
+xmlhttp4.open("GET","content/Events/config.json");
+xmlhttp4.send();
+
+function showEvents(data)
+{ 
+  const len = data.events.length;
+  var elements = [];
+  for(var i =0;i<len;i++)
+  {
+    var cell = document.createElement('a');
+    cell.classList.add("w3-padding");
+    cell.style.width = "300px";
+    cell.href = data.events[i].url;
+
+      var card = document.createElement('div');
+      card.classList.add("w3-card");
+         
+         var imgchild = document.createElement('img');
+         imgchild.src = data.events[i].imgurl;
+         imgchild.alt = "Events Image";
+         imgchild.style.width = "100%";
+         imgchild.style.height = "150px";
+
+         var content = document.createElement('div');
+         content.classList.add("w3-padding");
+             
+            var title = document.createElement('h3');
+            title.innerText = data.events[i].name;
+
+            var description = document.createElement('p');
+            description.innerText = data.events[i].desc;
+            description.classList.add("members-desc");
+          
+         content.appendChild(title);
+         content.appendChild(description);
+      
+      card.appendChild(imgchild);
+      card.appendChild(content);
+      
+    cell.appendChild(card);
+
+    elements[i] = cell;
+    cell = "";
+  }
+
+  eventFlkty.append(elements);
+  eventFlkty.reloadCells()
+  
+}
