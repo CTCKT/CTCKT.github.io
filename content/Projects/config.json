@@ -1,8 +1,50 @@
 {
-name:'',
-year:'',
-by: '',
-description:'',
-image:'',
-links:'',
-}
+    "projects":
+    [
+       {
+           "name":"Demo1",
+           "year":"2021",
+           "by":"Anonymous",
+           "group":"#",
+           "desc":"Nothing much.Just a small description",
+           "imgurl":"content/Projects/project_img/loading.gif",
+           "url":"https://ctckt.github.io"
+       },
+       {
+           "name":"Demo2",
+           "year":"2021",
+           "by":"Anonymous",
+           "group":"#",
+           "desc":"Nothing much.Just a small description",
+           "imgurl":"content/Projects/project_img/loading.gif",
+           "url":"https://ctckt.github.io"
+       },
+       {
+           "name":"Demo3",
+           "year":"2021",
+           "by":"Anonymous",
+           "group":"#",
+           "desc":"Nothing much.Just a small description",
+           "imgurl":"content/Projects/project_img/loading.gif",
+           "url":"https://ctckt.github.io"
+       },
+       {
+           "name":"Demo4",
+           "year":"2021",
+           "by":"Anonymous",
+           "group":"#",
+           "desc":"Nothing much.Just a small description",
+           "imgurl":"content/Projects/project_img/loading.gif",
+           "url":"https://ctckt.github.io"
+       },
+       {
+        "name":"Demo5",
+        "year":"2021",
+        "by":"Anonymous",
+        "group":"#",
+        "desc":"Nothing much.Just a small description",
+        "imgurl":"content/Projects/project_img/loading.gif",
+        "url":"https://ctckt.github.io"
+    }
+    ]   
+   }
