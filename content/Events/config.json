@@ -1,15 +1,18 @@
 {
+    "comment":[
+        "Kindly keep title within 30-32 characters"
+    ],
     "events":
     [
        {
            "name":"Event1",
-           "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Non nisi est sit amet facilisis magna. Aliquet nibh praesent tristique magna. Sodales neque sodales ut etiam sit amet nisl. Dignissim convallis aenean et tortor at. Nunc sed augue lacus viverra vitae congue eu. Ut placerat orci nulla pellentesque dignissim enim sit amet. Ultricies mi quis hendrerit dolor magna eget est lorem. Nibh tellus molestie nunc non blandit. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Netus et malesuada fames ac.",
+           "date":"Register Before : 10/02/2021",
            "imgurl":"https://source.unsplash.com/1600x900/?mountains",
            "url":"https://ctckt.github.io"
        },
        {
-        "name":"Event2",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "name":"Demo Event on Introduction to MLops",
+        "date":"Register Before : 10/02/2021",
         "imgurl":"https://source.unsplash.com/1600x900/?lights",
         "url":"https://ctckt.github.io"
     }
