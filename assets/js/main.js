@@ -159,27 +159,29 @@ xmlhttp3.send();
 function updateTimeline(data)
 {
   const len = data.count.length;
-  var element = document.getElementById("timeline");
+  var element = document.getElementById("timeline-table");
   var max = data.count[len-1].count;
-  document.getElementById("timeline-heading").innerText = "We are " + String(max) + " members strong . . .";
+  document.getElementById("timeline-heading").innerText = "We are " + String(max) + " members strong ";
   for(var i=0;i<3 && i<len;i++)
   {
-    var cell = document.createElement('div');
-    cell.classList.add("w3-row");
-    cell.style.paddingTop = "3px";
-      var year = document.createElement('div');
-      year.classList.add("w3-quarter");
-      year.style.textAlign = "right";
-      year.style.paddingRight = "15px";
+    var cell = document.createElement('tr');
+      var year = document.createElement('th');
       year.innerText = data.count[len-1-i].year;
       
-      var bardiv = document.createElement('div');
-      bardiv.classList.add("w3-round-xlarge","w3-rest");
+      var bardiv = document.createElement('th');
+      bardiv.style.minWidth = "200px";
+      bardiv.style.maxWidth = "500px";
+      bardiv.style.width = "95%";
+      bardiv.style.paddingLeft = "5px";
+
          var bar = document.createElement('div');
-         bar.classList.add("w3-container","w3-blue","w3-round");
-         bar.style.display = "inline-block";
+         bar.classList.add("w3-blue","w3-round-xlarge");
+         bar.style.height = "20px";
          bar.style.width = String((data.count[len-1-i].count/max)*100)+"%";
-         bar.innerText = data.count[len-1-i].count;
+         bar.style.textAlign = "right";
+         bar.style.textIndent = "10px"
+         bar.innerHTML = String(data.count[len-1-i].count)+"&nbsp;&nbsp;";
+
       bardiv.appendChild(bar);
     cell.appendChild(year);
     cell.appendChild(bardiv);
