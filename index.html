@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="assets/js/flickity.pkgd.min.js"></script>
   <script src="assets/js/particles.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
 </head>
 
 <body style="height: 100%;background-color: white;">
@@ -24,9 +22,9 @@
     <div class="w3-bar w3-black w3-wide w3-padding w3-card w3-text-white">
       <a href="#home" class="w3-bar-item w3-button"><b>CTC-KT</b> </a>
       <div class="w3-right w3-hide-small">
-        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
         <a href="#about" class="w3-bar-item w3-button">About</a>
-        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+        <a href="#events" class="w3-bar-item w3-button">Events</a>
       </div>
     </div>
   </div>
@@ -51,10 +49,7 @@
     <!-- About Section -->
     <div class="w3-container w3-padding" id="about">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-      <p>A Community group of karunya university students interested in developer technologies.
-        Students grow their knowledge in a peer-to-peer learning environment
-        and build solutions for social problems surrounding us.
-      </p>
+      <p>A community of Karunya Uiversity students interested in various developer technologies. An arena for students to grow their knowledge, skills and experience through a peer-to-peer learning environment and by building solutions for social problems surrounding us.</p>
     </div>
 
     <!-- Members Section -->
@@ -72,45 +67,38 @@
 
     <!--Timeline-->
     <div class="w3-container w3-padding " id="timeline">
-      <div class="w3-center"><h2 id="timeline-heading">We are 20 members strong...</h2></div>
-      <div class="w3-row w3-padding-16">
-        <div class="w3-round w3-quarter" style="text-align:right;padding-right:15px;">
-          Year
-        </div>
-        <div class="w3-rest">
-          Members
-        </div>
+      <div class="w3-center"><h2 id="timeline-heading"></h2></div>
+      <div class="w3-padding-16" >
+        <table style="padding-right:5px;margin-left: auto;margin-right: auto;" id="timeline-table">
+          <tr>
+            <th><p>Year</p></th>
+            <th style="text-align: left;padding-left: 5px;"><p>Members</p></th>
+          </tr>
+        </table>
       </div>
     </div>
 
     <!-- Events Section -->
-    <div class="w3-container w3-padding-16" id="events">
+    <div class="w3-container w3-padding-32" id="events">
       <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Upcoming Events</h3>
-      <!--<div class="event-carousel" data-flickity='{ "groupCells": true }' id="event-carousel">-->
-      <div class="events-carousel" data-flickity={}> 
+      <div class="events-carousel" data-flickity='{"groupCells": true}'>
       </div>
       </div>
     </div>
 
-   
     <!-- Footer -->
-
     <footer>
       <div class="container" style="width: 100%;
-      max-width: 1100px;
-      padding: 0 20px;
-      margin: 0 auto;">
+          max-width: 1100px;
+          padding: 0 20px;
+          margin: 0 auto;">
         <div class="footer-content">
           <div class="items">
             <a href="#" class="logo">CTC-KT</a>
             <p>Artificial Intelligence and Robotics <br>Karunya Institute of Technology and Sciences, Karunya Nagar,
               Coimbatore, Tamil Nadu 641114 </p>
           </div>
-
-
-
-
-
+    
           <ul>
             <div class="social">
               <a href="https://www.facebook.com/karunyauniversity/" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -118,16 +106,13 @@
               <a href="https://www.instagram.com/karunyauniv/" target="_blank"><i class="fa fa-instagram"></i></a>
               <a href="https://github.com/CTCKT/CTCKT.github.io" target="_blank"><i class="fa fa-github"></i></a>
             </div>
-
           </ul>
-
+    
           <div class="items">
             <h3>Legal</h3>
             <ul>
               <li><a href="#home">Terms</a></li>
               <li><a href="#home">Privacy Policy</a></li>
-
-
             </ul>
           </div>
         </div>
