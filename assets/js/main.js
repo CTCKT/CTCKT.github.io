@@ -207,10 +207,9 @@ function showEvents(data)
   var elements = [];
   for(var i =0;i<len;i++)
   {
-    var cell = document.createElement('a');
+    var cell = document.createElement('div');
     cell.classList.add("w3-padding");
     cell.style.width = "300px";
-    cell.href = data.events[i].url;
 
       var card = document.createElement('div');
       card.classList.add("w3-card");
@@ -224,15 +223,31 @@ function showEvents(data)
          var content = document.createElement('div');
          content.classList.add("w3-padding");
              
-            var title = document.createElement('h3');
+            var title = document.createElement('h4');
+            title.style.lineHeight = "1.25em";
+            title.style.height = "2.5em";
+            title.style.overflow = "hidden";
             title.innerText = data.events[i].name;
 
-            var description = document.createElement('p');
-            description.innerText = data.events[i].desc;
-            description.classList.add("members-desc");
+            var date = document.createElement('div');
+            date.classList.add("w3-small");
+            date.style.marginTop = "10px";
+            date.innerText = data.events[i].date;
+
+            var area = document.createElement('div');
+            area.classList.add("w3-display-container");
+            area.style.height = "75px";
+                
+             var button = document.createElement('div');
+             button.classList.add("w3-grey","w3-display-middle");
+             button.style.borderRadius = "25px";
+             button.innerHTML = "&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;";
+            
+            area.appendChild(button);
           
          content.appendChild(title);
-         content.appendChild(description);
+         content.appendChild(date);
+         content.appendChild(area);
       
       card.appendChild(imgchild);
       card.appendChild(content);
