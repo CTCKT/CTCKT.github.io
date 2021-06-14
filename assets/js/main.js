@@ -238,7 +238,8 @@ function showEvents(data)
             area.classList.add("w3-display-container");
             area.style.height = "75px";
                 
-             var button = document.createElement('div');
+             var button = document.createElement('a');
+             button.href = data.events[i].url;
              button.classList.add("w3-grey","w3-display-middle");
              button.style.borderRadius = "25px";
              button.innerHTML = "&nbsp;&nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;";
