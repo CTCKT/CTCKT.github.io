@@ -88,9 +88,19 @@ footer{
     padding: 60px 0;
 }
 li{
-    list-style: none;
+    list-style-type: none;
     line-height: 2;
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
 }
+
+ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 a{
     text-decoration: none;
 }
