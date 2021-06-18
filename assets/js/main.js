@@ -34,6 +34,7 @@ function showMembers(data)
           imgchild.classList.add("mb-3","rounded-full","mx-auto","h-32","w-32");
           imgchild.src = "/content/Members/profile_img/" + data.members[i].regno + ".png";
           imgchild.alt = data.members[i].name;      
+          imgchild.onerror = function(){this.src = "assets/images/default.png";}
 
        imglink.appendChild(imgchild);
 
