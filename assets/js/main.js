@@ -54,14 +54,22 @@ function showMembers(data)
 
           for(j=0;j<urls.length;j++)
           {
-            var anchor  = document.createElement('a');
-            anchor.href = data.members[i].url[urls[j]];
-              var icon = document.createElement('i');
-              icon.classList.add("fa",urlsclass[j],"p-2");
-            anchor.appendChild(icon);
-            links.appendChild(anchor);
-            anchor = null;
-            icon = null;
+            urlhref =  data.members[i].url[urls[j]];
+            if(urlhref == "")
+            {
+              break;
+            }
+            else
+            {
+              var anchor = document.createElement('a');
+              anchor.href = urlhref;
+                 var icon = document.createElement('i');
+                 icon.classList.add("fa", urlsclass[j], "p-2");
+              anchor.appendChild(icon);
+              links.appendChild(anchor);
+              anchor = null;
+              icon = null;
+            }
           }
       
 
