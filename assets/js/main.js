@@ -131,7 +131,8 @@ function showProjects(data)
                  desc.innerText =  data.projects[i].desc;
                  var link = document.createElement('a');
                  link.href = data.projects[i].url;
-                     var span = document.createElement('span');
+                     var span = document.createElement('div');
+                     span.classList.add("my-4");
                      span.innerText = "Know More ";
                          var icon = document.createElement('i');
                          icon.classList.add("fa","fa-plus");
