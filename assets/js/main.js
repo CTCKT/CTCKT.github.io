@@ -23,53 +23,55 @@ function showMembers(data)
   for(var i =0;i<len;i++)
   {
     var cell = document.createElement('div');
-    cell.style.display = "block";
-    cell.classList.add("w3-col","l3","m6","w3-margin-bottom","w3-padding");
-    
-       var imgchild = document.createElement('img');
-       imgchild.src = "content/Members/profile_img/" + data.members[i].regno + ".png";
-       imgchild.onerror = function(){this.src = "assets/images/default.png";}
-       imgchild.alt = data.members[i].name;
-       imgchild.classList.add("w3-image");
-       imgchild.style.width = "100%";
-       imgchild.style.height = "200px";
+    cell.style.width = "100%";
+    cell.style.maxWidth = "220px";
+    cell.classList.add("text-center");
 
-       var name = document.createElement('h3');
-       name.innerText = data.members[i].name;
+       var imglink = document.createElement('a');
+       imglink.href = data.members[i].url.web;
+
+          var imgchild = document.createElement('img');  
+          imgchild.classList.add("mb-3","rounded-full","mx-auto","h-32","w-32");
+          imgchild.src = "/content/Members/profile_img/" + data.members[i].regno + ".png";
+          imgchild.alt = data.members[i].name;      
+          imgchild.onerror = function(){this.src = "assets/images/default.png";}
+
+       imglink.appendChild(imgchild);
+
+       var namediv = document.createElement('div');
+       namediv.classList.add("font-semibold");  
+       namediv.innerText = data.members[i].name;
 
        var caption = document.createElement('p');
-       caption.classList.add("w3-opacity")
+       caption.classList.add("text-grey-500","text-sm");
        caption.innerText = data.members[i].caption;
-
-       var description = document.createElement('p');
-       description.style.textAlign = "justify";
-       description.style.padding = "4px"
-       description.innerText = data.members[i].desc;
-       description.classList.add("members-desc");
-
-       var links = document.createElement('div');
-       links.classList.add("w3-center");
        
-       urls = ["github","linkedin","hackerrank","mail","web"];
-       urlsclass = ["fa-github","fa-linkedin","fa-code","fa-envelope","fa-external-link"];
+       var links = document.createElement('div');
+       links.classList.add("my-4","flex","justify-center","items-center");
+       
+       urls = ["github","linkedin","hackerrank"];
+       urlsclass = ["fa-github","fa-linkedin","fa-code"];
 
           for(j=0;j<urls.length;j++)
           {
-            var anchor = document.createElement('a');
-            anchor.href = data.members[i].url[urls[j]];
-              var icon = document.createElement('i');
-              icon.classList.add("fa",urlsclass[j],"w3-padding");
-            anchor.appendChild(icon);
-            links.appendChild(anchor);
-            anchor = null;
-            icon = null;
+            urlhref =  data.members[i].url[urls[j]];
+            if(urlhref != "")
+            {
+              var anchor = document.createElement('a');
+              anchor.href = urlhref;
+                 var icon = document.createElement('i');
+                 icon.classList.add("fa", urlsclass[j], "p-2");
+              anchor.appendChild(icon);
+              links.appendChild(anchor);
+              anchor = null;
+              icon = null;
+            }
           }
       
 
-    cell.appendChild(imgchild);
-    cell.appendChild(name);
+    cell.appendChild(imglink);
+    cell.appendChild(namediv);
     cell.appendChild(caption);
-    cell.appendChild(description);
     cell.appendChild(links)
     elements[i] = cell;
     cell = "";
@@ -121,11 +123,12 @@ function showProjects(data)
                  credit.classList.add("w3-small");
                  credit.innerText = "By " + data.projects[i].by;
                  var desc = document.createElement('p');
-                 desc.classList.add("proj-desc");
+                 desc.classList.add("proj-desc","my-2");
                  desc.innerText =  data.projects[i].desc;
                  var link = document.createElement('a');
                  link.href = data.projects[i].url;
-                     var span = document.createElement('span');
+                     var span = document.createElement('div');
+                     span.classList.add("mb-2");
                      span.innerText = "Know More ";
                          var icon = document.createElement('i');
                          icon.classList.add("fa","fa-plus");

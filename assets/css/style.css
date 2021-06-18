@@ -6,13 +6,13 @@
 
 .flickity-prev-next-button.previous 
 {
-    left: -10px;
+    left: -15px;
     padding-left: 5px;
 }
 
 .flickity-prev-next-button.next 
 {
-    right: -10px;
+    right: -15px;
     padding-right: 5px;
 }
 
@@ -23,27 +23,6 @@
     padding-right: 20px;
 }
 
-.members-desc
-{
-    height: 112px;
-    overflow-y: auto;
-}
-.members-desc::-webkit-scrollbar
-{
-    width: 5px;
-}
-.members-desc::-webkit-scrollbar-track 
-{
-    background: #f1f1f1; 
- }
-.members-desc::-webkit-scrollbar-thumb
-{
-    background:#888;
-}
-.members-desc::-webkit-scrollbar-thumb:hover 
-{
-    background: #555; 
-}
 
 .proj-desc
 {
