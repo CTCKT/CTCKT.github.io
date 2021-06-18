@@ -5,12 +5,10 @@
         "regno":"URK20CS2024",
         "name":"Vaishnavi Sinha",
         "caption":"Student",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Non nisi est sit amet facilisis magna. Aliquet nibh praesent tristique magna. Sodales neque sodales ut etiam sit amet nisl. Dignissim convallis aenean et tortor at. Nunc sed augue lacus viverra vitae congue eu. Ut placerat orci nulla pellentesque dignissim enim sit amet. Ultricies mi quis hendrerit dolor magna eget est lorem. Nibh tellus molestie nunc non blandit. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Netus et malesuada fames ac.",
         "url":{
                "github":"https://github.com/vaishnawisinha",
                "linkedin":"https://www.linkedin.com/in/vaishnawi-sinha",
                "hackerrank":"#members",
-               "mail":"mailto:vaishnawisinha@karunya.edu.in",
                "web":"#members"
               }
     },
@@ -18,12 +16,10 @@
         "regno":"URK20CS2030",
         "name":"Feby Sara Shibu",
         "caption":"Student",
-        "desc":"A young, dynamic person seeking challenging positions in the field of programming  where I can learn and grow my skills.",
         "url":{
             "github":"#members",
             "linkedin":"https://www.linkedin.com/in/feby-sara-shibu-3a5400209",
             "hackerrank":"#members",
-            "mail":"#members",
             "web":"#members"
            }
     },
@@ -31,12 +27,10 @@
         "regno":"URK20CS2038",
         "name":"Ashvin V",
         "caption":"Student",
-        "desc":"A passionate CSE student and AI enthusiast with a zest to learn more and to apply that knowledge to create real world applications.",
         "url":{
             "github":"https://github.com/acedev003",
             "linkedin":"#members",
             "hackerrank":"#members",
-            "mail":"mailto:ashvinvinu@karunya.edu.in",
             "web":"https://acedev03.web.app"
            }
     },
@@ -44,12 +38,10 @@
         "regno":"URK20CS2045",
         "name":"Arnold Anand",
         "caption":"Student",
-        "desc":"Determined and punctual CSE student. Able to quickly build trust and collaborative working relationships.",
         "url":{
             "github":"https://github.com/arnold-anand",
             "linkedin":"https://www.linkedin.com/in/arnold-anand/",
             "hackerrank":"https://www.hackerrank.com/arnold_anand",
-            "mail":"mailto:pagadalaarnold@karunya.edu.in",
             "web":"#members"
            }
     }
