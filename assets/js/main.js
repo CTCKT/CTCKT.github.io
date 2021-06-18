@@ -123,12 +123,12 @@ function showProjects(data)
                  credit.classList.add("w3-small");
                  credit.innerText = "By " + data.projects[i].by;
                  var desc = document.createElement('p');
-                 desc.classList.add("proj-desc");
+                 desc.classList.add("proj-desc","my-2");
                  desc.innerText =  data.projects[i].desc;
                  var link = document.createElement('a');
                  link.href = data.projects[i].url;
                      var span = document.createElement('div');
-                     span.classList.add("my-4");
+                     span.classList.add("mb-2");
                      span.innerText = "Know More ";
                          var icon = document.createElement('i');
                          icon.classList.add("fa","fa-plus");
