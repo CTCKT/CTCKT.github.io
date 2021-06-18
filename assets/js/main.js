@@ -55,11 +55,7 @@ function showMembers(data)
           for(j=0;j<urls.length;j++)
           {
             urlhref =  data.members[i].url[urls[j]];
-            if(urlhref == "")
-            {
-              break;
-            }
-            else
+            if(urlhref != "")
             {
               var anchor = document.createElement('a');
               anchor.href = urlhref;
