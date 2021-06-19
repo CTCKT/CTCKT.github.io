@@ -1,0 +1,4 @@
+- Filename should be your register number.
+- Images should be of .png format
+- Use square images 
+- Recommended dimension of 256x256
