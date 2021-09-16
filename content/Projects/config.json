@@ -2,48 +2,48 @@
     "projects":
     [
        {
-           "name":"Demo1",
+           "name":"K-Bot",
            "year":"2021",
-           "by":"Anonymous",
+           "by":"Ashvin V and Vaishnawi Sinha",
            "group":"#",
-           "desc":"Nothing much.Just a small description",
-           "imgurl":"content/Projects/project_img/loading.gif",
+           "desc":"Chatbot to assist students and users with their queries",
+           "imgurl":"content/Projects/project_img/kbot.png",
            "url":"https://ctckt.github.io"
        },
        {
-           "name":"Demo2",
+           "name":"Pedestrian Tracker",
            "year":"2021",
-           "by":"Anonymous",
+           "by":"Arnold Anand",
            "group":"#",
-           "desc":"Nothing much.Just a small description",
-           "imgurl":"content/Projects/project_img/loading.gif",
+           "desc":"Simple Pedestrian tracker with various applications",
+           "imgurl":"content/Projects/project_img/ped_track.png",
            "url":"https://ctckt.github.io"
        },
        {
-           "name":"Demo3",
+           "name":"Social-Distance Monitor",
            "year":"2021",
-           "by":"Anonymous",
+           "by":"Arnold Anand",
            "group":"#",
-           "desc":"Nothing much.Just a small description",
-           "imgurl":"content/Projects/project_img/loading.gif",
+           "desc":"Social Distance Tracker to keep people safe",
+           "imgurl":"content/Projects/project_img/social_dist.png",
            "url":"https://ctckt.github.io"
        },
        {
-           "name":"Demo4",
+           "name":"Text Detection",
            "year":"2021",
-           "by":"Anonymous",
+           "by":"Vaishnawi Sinha",
            "group":"#",
-           "desc":"Nothing much.Just a small description",
-           "imgurl":"content/Projects/project_img/loading.gif",
+           "desc":"Recognize printed text rotated at any angle in various environments",
+           "imgurl":"content/Projects/project_img/text_detect.png",
            "url":"https://ctckt.github.io"
        },
        {
-        "name":"Demo5",
+        "name":"Face Detection",
         "year":"2021",
-        "by":"Anonymous",
+        "by":"Vaishnawi Sinha",
         "group":"#",
-        "desc":"Nothing much.Just a small description",
-        "imgurl":"content/Projects/project_img/loading.gif",
+        "desc":"Capture emotions, age, pose, landmarks from images ",
+        "imgurl":"content/Projects/project_img/face_detect.png",
         "url":"https://ctckt.github.io"
     }
     ]   
